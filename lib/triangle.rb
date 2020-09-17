@@ -9,7 +9,7 @@ class Triangle
   end
 
 def triangle?
-  if ((a + b > c) || (b + c > a) || (a + c > b)) && ((a > 0) && (b > 0) && (c > 0))
+  if [(a + b > c), (b + c > a), (a + c > b)] && [(a > 0) && (b > 0) && (c > 0)]
     return true
   if Triangle.new(0, 0, 0)
      raise TriangleError
@@ -26,7 +26,6 @@ end
     return :scalene
   end
 end
-
 
   class TriangleError < StandardError
 end
